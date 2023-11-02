@@ -1,0 +1,31 @@
+.sidebar-container {
+    height: 100vh;
+}
+
+.sidebar-button {
+    margin-top: 18px;
+}
+
+.user-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.user-details {
+  margin-top: 8px;
+}
+
+.profile-picture {
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 46px;
+    height: 46px;
+    border-radius: 60%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.login-icon {
+  margin-top: 9px;
+  margin-left: 2px;
+}

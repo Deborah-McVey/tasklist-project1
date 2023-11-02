@@ -1,0 +1,17 @@
+.tasklist-container {
+  height: 100vh;
+  margin: 35px;
+  max-width: 1372px;
+}
+
+.btn {
+  margin-left: 50px;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+}
+
+.navbar {
+  position: relative;
+  width: auto;
+}
