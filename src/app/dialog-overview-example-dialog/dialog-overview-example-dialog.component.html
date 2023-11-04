@@ -1,13 +1,32 @@
-<h1 mat-dialog-title>Hi {{data.name}}</h1>
+<h1 mat-dialog-title>Add a New Task</h1>
 <div mat-dialog-content>
-  <p>What's your favorite animal?</p>
   <mat-form-field>
-    <mat-label>Favorite Animal</mat-label>
+
+    <mat-label>Title</mat-label>
     <input matInput [(ngModel)]="data.animal">
+
+    <mat-label>Description</mat-label>
+    <textarea type="textarea" name="description" id="description" placeholder="Description" rows="4" cols="50" required matInput [(ngModel)]="data.animal"></textarea>
+
+    <!-- <mat-label>Due Date</mat-label>
+      <input matInput [matDatepicker]="relDob" [formControl]="dueDate">
+      <mat-datepicker-toggle matSuffix [for]="relDob"></mat-datepicker-toggle>
+      <mat-datepicker #relDob></mat-datepicker> -->
+
+    <mat-label>Priority</mat-label>
+    <input matInput [(ngModel)]="data.animal">
+
+    <mat-label>Status</mat-label>
+    <input matInput [(ngModel)]="data.animal">
+
   </mat-form-field>
+
+
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Create</button>
 </div>
 
