@@ -14,17 +14,24 @@
       <mat-datepicker #relDob></mat-datepicker> -->
 
     <mat-label>Priority</mat-label>
-    <input matInput [(ngModel)]="data.animal">
+    <select name="priority" id="priority" placeholder="Priority" multiple>
+      <option label="high" value="high">High</option>
+      <option label="medium" value="medium">Medium</option>
+      <option label="low" value="low">Low</option>
+  </select>
+    <!-- <input matInput [(ngModel)]="data.animal"> -->
 
     <mat-label>Status</mat-label>
-    <input matInput [(ngModel)]="data.animal">
-
-  </mat-form-field>
+    <select name="status" id="status" placeholder="Status" multiple>
+      <option label="toDo" value="toDo">To Do</option>
+      <option label="workingOn" value="workingOn">Working On</option>
+      <option label="completed" value="completed">Completed</option>
+    </select>
 
 
   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
 
-</div>
+</mat-form-field>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Cancel</button>
   <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Create</button>
