@@ -15,7 +15,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { DialogOverviewExample } from './dialog-overview-example/dialog-overview-example.component';
 import { DialogOverviewExampleDialog } from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,8 @@ import { DialogOverviewExampleDialog } from './dialog-overview-example-dialog/di
     FormsModule,
     MatButtonModule,
     NgIf,
-    MatDialogModule
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

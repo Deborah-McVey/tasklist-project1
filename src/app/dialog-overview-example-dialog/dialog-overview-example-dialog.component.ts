@@ -9,7 +9,7 @@ import { DialogData } from '../dialog-overview-example/dialog-overview-example.c
 export class DialogOverviewExampleDialog {
   constructor(
     public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
   onNoClick(): void {
