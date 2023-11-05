@@ -1,37 +1,39 @@
 <h1 mat-dialog-title>Add a New Task</h1>
 <div mat-dialog-content>
+
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
   <mat-form-field>
 
-    <mat-label>Title</mat-label>
-    <input matInput [(ngModel)]="data.animal">
+    <!-- <mat-label>Title</mat-label> -->
+    <input type="text" placeholder="Title" matInput [(ngModel)]="data.animal" required>
 
-    <mat-label>Description</mat-label>
     <textarea type="textarea" name="description" id="description" placeholder="Description" rows="4" cols="50" required matInput [(ngModel)]="data.animal"></textarea>
 
-    <mat-label>Due Date</mat-label>
-      <input type="date" matInput> <!-- [matDatepicker]="relDob" [formControl]="dueDate"
+      <input type="date" min="08-15-2005" placeholder="Due Date" matInput required> <!-- [matDatepicker]="relDob" [formControl]="dueDate"
       <mat-datepicker-toggle matSuffix [for]="relDob"></mat-datepicker-toggle>
       <mat-datepicker #relDob></mat-datepicker> -->
 
+  <div>
     <mat-label>Priority</mat-label>
-    <select name="priority" id="priority" placeholder="Priority" multiple>
-      <option label="high" value="high">High</option>
-      <option label="medium" value="medium">Medium</option>
-      <option label="low" value="low">Low</option>
+    <select name="priority" id="priority" placeholder="Priority" required>
+      <option type="checkbox" label="high" value="high">High</option>
+      <option type="checkbox" label="medium" value="medium">Medium</option>
+      <option type="checkbox" label="low" value="low">Low</option>
   </select>
+</div>
     <!-- <input matInput [(ngModel)]="data.animal"> -->
 
+  <div>
     <mat-label>Status</mat-label>
-    <select name="status" id="status" placeholder="Status" multiple>
-      <option label="toDo" value="toDo">To Do</option>
-      <option label="workingOn" value="workingOn">Working On</option>
-      <option label="completed" value="completed">Completed</option>
+    <select name="status" id="status" placeholder="Status" required>
+      <option type="checkbox" label="toDo" value="toDo">To Do</option>
+      <option type="checkbox" label="workingOn" value="workingOn">Working On</option>
+      <option type="checkbox" label="completed" value="completed">Completed</option>
     </select>
-
-
-  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+  </div>
 
 </mat-form-field>
+
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Cancel</button>
   <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Create</button>

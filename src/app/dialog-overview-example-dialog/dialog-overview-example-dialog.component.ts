@@ -16,18 +16,4 @@ export class DialogOverviewExampleDialog {
   onNoClick(): void {
     this.dialogRef.close();
   }
-
-/*   const moment = _moment;
-
-  releaseDate = new FormControl(moment("10-20-2020", "MM-DD-YYYY"));
-
-  setDefaultDate() {
-    this.studentForm.patchValue({
-      dateOfBirth: moment("12/25/1995", "MM/DD/YYYY"),
-      admDateRange: {
-      startDate: moment("June 01, 2020", "MMM DD,YYYY"),
-      endDate: moment("July 31, 2020", "MMM DD,YYYY")
-      }
-    });
-   }  */
 }
