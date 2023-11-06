@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./kanban.component.css']
 })
 export class KanbanComponent {
-
+  
 }

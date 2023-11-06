@@ -1,7 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DialogData } from '../dialog-overview-example/dialog-overview-example.component';
-/* import * as _moment from 'moment'; */
 
 @Component({
   selector: 'dialog-overview-example-dialog',
