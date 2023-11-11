@@ -1,4 +1,47 @@
-<div class="container">
+<div class="root">
+  <div class="navbar has-background-dark">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <h1 class="app-name has-gradient-text">Kanban</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="board">
+
+    <div class="board-bar">
+      <p class="board-name">{{ board.name }}</p>
+    </div>
+
+    <div class="board-wrapper">
+
+      <div class="board-columns" cdkDropListGroup>
+        <div class="board-column" *ngFor="let columns of board.columns">
+
+          <div class="column-title">
+            {{ columns.name }}
+          </div>
+
+          <div class="tasks-container"
+          cdkDropList
+          [cdkDropListData]="columns.tasks"
+          (cdkDropListDropped)="drop($event)">
+            <div class="task" *ngFor="let item of columns.tasks" cdkDrag>
+              {{ item }}
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- <div class="container">
       <div class="kanban-heading">
           <strong class="kanban-heading-text">Kanban Board</strong>
       </div>
@@ -9,7 +52,8 @@
       </div>
   </div>
 
-<!-- <div class="control-section e-tab-section">
+
+  <div class="control-section e-tab-section">
   <div class="e-sample-resize-container">
     <ejs-tab id="element">
       <e-tabitems>
@@ -30,5 +74,24 @@
       </e-tabitems>
     </ejs-tab>
   </div>
-</div> -->
+</div>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Results</title>
+</head>
+<body>
+    <div id="results"></div>
+    <a href="/">Back to Form</a>
+    <script>
+        const resultsList = document.getElementById('results')
+        new URLSearchParams(window.location.search).forEach((value, name) => {
+            resultsList.append('${name}: ${value}')
+            resultsList.append(document.createElement('br'))
+        })
+    </script>
+    </body> -->

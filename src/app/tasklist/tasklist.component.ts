@@ -33,4 +33,9 @@ export class TasklistComponent {
       }
      });
      console.log(dialogRef)
-}}
+}
+  openKanban() {
+    this.modalMode = "Open Kanban";
+    this.openKanban()
+  }
+}

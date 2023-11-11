@@ -1,39 +1,37 @@
-<div class="top-content d-flex flex-row">
+<div class="top-content d-flex flex-row float-left">
   <h2 mat-dialog-title class="p-2 dialog-title">Add a New Task</h2>
   <div class="p-2">
-<button mat-icon-button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<button mat-icon-button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="onNoClick()"></button>
 </div>
 </div>
 
-<div class="grid-container mat-dialog-content">
+<div class="grid-container mat-dialog-content float-right">
 
     <div class="left-content p-3 d-flex flex-column">
-    <input class="p-2" type="text" placeholder="Title" matInput [(ngModel)]="data.animal" required>
+    <input class="p-2" type="text" placeholder="Title" matInput [(ngModel)]="data.title" required>
 
-    <textarea class="p-2" type="textarea" name="description" id="description" placeholder="Description" rows="4" cols="50" required matInput [(ngModel)]="data.animal"></textarea>
+    <textarea class="p-2" type="textarea" name="description" id="description" placeholder="Description" rows="4" cols="50" required matInput [(ngModel)]="data.description"></textarea>
     </div>
 
     <div class="right-content d-flex flex-column">
-      <input class="p-2" type="date" placeholder="Due Date" matInput required> <!-- [matDatepicker]="relDob" [formControl]="dueDate"
-      <mat-datepicker-toggle matSuffix [for]="relDob"></mat-datepicker-toggle>
-      <mat-datepicker #relDob></mat-datepicker> -->
+      <input class="p-2" type="date" placeholder="Due Date" matInput [(ngModel)]="data.date" required>
 
   <div class="p-2">
     <mat-label>Priority</mat-label>
-    <select name="priority" id="priority" placeholder="Priority" required>
-      <option type="checkbox" label="high" value="high">High</option>
-      <option type="checkbox" label="medium" value="medium">Medium</option>
-      <option type="checkbox" label="low" value="low">Low</option>
+    <select name="priority" id="priority" placeholder="Priority" [(ngModel)]="data.priority" required>
+      <option>High</option>
+      <option>Medium</option>
+      <option>Low</option>
   </select>
 </div>
     <!-- <input matInput [(ngModel)]="data.animal"> -->
 
   <div class="p-2">
     <mat-label>Status</mat-label>
-    <select name="status" id="status" placeholder="Status" required>
-      <option type="checkbox" label="toDo" value="toDo">To Do</option>
-      <option type="checkbox" label="workingOn" value="workingOn">In Progress</option>
-      <option type="checkbox" label="completed" value="completed">Completed</option>
+    <select name="status" id="status" placeholder="Status" [(ngModel)]="data.status" required>
+      <option>To Do</option>
+      <option>In Progress</option>
+      <option>Completed</option>
     </select>
   </div>
 
