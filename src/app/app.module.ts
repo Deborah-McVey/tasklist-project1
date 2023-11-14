@@ -16,6 +16,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { DialogOverviewExample } from './dialog-overview-example/dialog-overview-example.component';
 import { DialogOverviewExampleDialog } from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TasklistComponent,
     KanbanComponent,
     DialogOverviewExample,
-    DialogOverviewExampleDialog
+    DialogOverviewExampleDialog,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
